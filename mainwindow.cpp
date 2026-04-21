@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     networkManager = new QNetworkAccessManager(this);
     ui->progressBar->setVisible(false);
+    ui->txtInstruction->setPlaceholderText("Wpisz polecenie, np. zmień nazwy wszystkich plików na wielkie litery...");
+    this->setStyleSheet("QMainWindow { background-color: #FFFFF0; color: black; }");
 }
 
 MainWindow::~MainWindow() {
@@ -48,6 +50,7 @@ void MainWindow::on_btnExecute_clicked() {
     ui->progressBar->setVisible(true);
     ui->progressBar->setRange(0, 0);
     ui->txtLog->append("Wysyłam zapytanie do modelu...");
+
 
     QUrl url("http://localhost:11434/api/generate");
     QNetworkRequest request(url);

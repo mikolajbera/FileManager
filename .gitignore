@@ -1,0 +1,15 @@
+# Foldery budowania CMake i Qt
+build/
+build-*/
+out/
+
+# Pliki konfiguracyjne użytkownika Qt Creatora
+*.user
+*.user.*
+CMakeLists.txt.user
+
+# Pliki tymczasowe systemu i Pythona
+.DS_Store
+__pycache__/
+*.pyc
+generated_script.py
